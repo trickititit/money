@@ -1,0 +1,128 @@
+# Qoder design files - Specific exclusion for investment portfolio design
+.qoder/quests/investment-portfolio-app.md
+.qoder/quests/*-design.md
+.qoder/temp/
+
+# Frontend (React/Node.js) exclusions
+# Dependencies
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Frontend build outputs
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# Environment configuration
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Frontend development tools
+frontend/.eslintcache
+frontend/.stylelintcache
+
+# Backend (.NET) exclusions
+# Build outputs
+backend/bin/
+backend/obj/
+backend/*/bin/
+backend/*/obj/
+*.dll
+*.exe
+*.pdb
+
+# .NET project artifacts
+backend/.vs/
+*.user
+*.suo
+*.cache
+*.tmp
+
+# Entity Framework
+backend/Migrations/
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration and secrets
+backend/appsettings.Development.json
+backend/appsettings.Local.json
+
+# General development exclusions
+# Logs
+logs/
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package managers
+*.tgz
+*.tar.gz
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Security - Environment variables and secrets
+.env*
+secrets.json
+appsettings.Production.json
+
+# Visual Studio specific
+.vs/
+*.sln.docstates
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Coverage reports
+coverage/
+*.cover
+*.py,cover
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cobertura.xml
+
+# Profiling
+*.dotMemoryUnit
+*.dotCover
+
+# Database
+*.mdf
+*.ldf
+*.ndf
