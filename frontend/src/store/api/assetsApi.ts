@@ -43,4 +43,4 @@ export const {
   useCreateAssetMutation,
   useUpdateAssetMutation,
   useDeleteAssetMutation,
-} = assetsApi;"
+} = assetsApi;

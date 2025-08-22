@@ -51,4 +51,4 @@ export const {
   useGetForexRateQuery,
   useGetPreciousMetalsPricesQuery,
   useGetHistoricalPricesQuery,
-} = pricesApi;"
+} = pricesApi;

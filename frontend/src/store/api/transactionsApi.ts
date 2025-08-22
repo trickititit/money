@@ -43,4 +43,4 @@ export const {
   useCreateTransactionMutation,
   useUpdateTransactionMutation,
   useDeleteTransactionMutation,
-} = transactionsApi;"
+} = transactionsApi;

@@ -53,7 +53,7 @@ const Register: React.FC = () => {
     
     if (!formData.email) {
       newErrors.email = 'Email is required';
-    } else if (!/\\S+@\\S+\\.\\S+/.test(formData.email)) {
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
     
@@ -111,193 +111,193 @@ const Register: React.FC = () => {
   };
   
   return (
-    <div className=\"min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8\">
-      <div className=\"max-w-md w-full space-y-8\">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className=\"mt-6 text-center text-3xl font-extrabold text-gray-900\">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Create your account
           </h2>
-          <p className=\"mt-2 text-center text-sm text-gray-600\">
+          <p className="mt-2 text-center text-sm text-gray-600">
             Or{' '}
             <Link
-              to=\"/login\"
-              className=\"font-medium text-primary-600 hover:text-primary-500\"
+              to="/login"
+              className="font-medium text-primary-600 hover:text-primary-500"
             >
               sign in to your existing account
             </Link>
           </p>
         </div>
-        <form className=\"mt-8 space-y-6\" onSubmit={handleSubmit}>
-          <div className=\"space-y-4\">
-            <div className=\"grid grid-cols-2 gap-4\">
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
               <div>
-                <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700\">
+                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
                   First Name
                 </label>
                 <input
-                  id=\"firstName\"
-                  name=\"firstName\"
-                  type=\"text\"
+                  id="firstName"
+                  name="firstName"
+                  type="text"
                   required
                   className={`input-field mt-1 ${errors.firstName ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : ''}`}
-                  placeholder=\"First name\"
+                  placeholder="First name"
                   value={formData.firstName}
                   onChange={handleChange}
                 />
                 {errors.firstName && (
-                  <p className=\"mt-1 text-sm text-red-600\">{errors.firstName}</p>
+                  <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
                 )}
               </div>
               <div>
-                <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700\">
+                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
                   Last Name
                 </label>
                 <input
-                  id=\"lastName\"
-                  name=\"lastName\"
-                  type=\"text\"
+                  id="lastName"
+                  name="lastName"
+                  type="text"
                   required
                   className={`input-field mt-1 ${errors.lastName ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : ''}`}
-                  placeholder=\"Last name\"
+                  placeholder="Last name"
                   value={formData.lastName}
                   onChange={handleChange}
                 />
                 {errors.lastName && (
-                  <p className=\"mt-1 text-sm text-red-600\">{errors.lastName}</p>
+                  <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>
                 )}
               </div>
             </div>
             
             <div>
-              <label htmlFor=\"username\" className=\"block text-sm font-medium text-gray-700\">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700">
                 Username
               </label>
               <input
-                id=\"username\"
-                name=\"username\"
-                type=\"text\"
+                id="username"
+                name="username"
+                type="text"
                 required
                 className={`input-field mt-1 ${errors.username ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : ''}`}
-                placeholder=\"Username\"
+                placeholder="Username"
                 value={formData.username}
                 onChange={handleChange}
               />
               {errors.username && (
-                <p className=\"mt-1 text-sm text-red-600\">{errors.username}</p>
+                <p className="mt-1 text-sm text-red-600">{errors.username}</p>
               )}
             </div>
             
             <div>
-              <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700\">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email Address
               </label>
               <input
-                id=\"email\"
-                name=\"email\"
-                type=\"email\"
-                autoComplete=\"email\"
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
                 required
                 className={`input-field mt-1 ${errors.email ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : ''}`}
-                placeholder=\"Email address\"
+                placeholder="Email address"
                 value={formData.email}
                 onChange={handleChange}
               />
               {errors.email && (
-                <p className=\"mt-1 text-sm text-red-600\">{errors.email}</p>
+                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
               )}
             </div>
             
             <div>
-              <label htmlFor=\"baseCurrency\" className=\"block text-sm font-medium text-gray-700\">
+              <label htmlFor="baseCurrency" className="block text-sm font-medium text-gray-700">
                 Base Currency
               </label>
               <select
-                id=\"baseCurrency\"
-                name=\"baseCurrency\"
-                className=\"input-field mt-1\"
+                id="baseCurrency"
+                name="baseCurrency"
+                className="input-field mt-1"
                 value={formData.baseCurrency}
                 onChange={handleChange}
               >
-                <option value=\"USD\">USD - US Dollar</option>
-                <option value=\"EUR\">EUR - Euro</option>
-                <option value=\"GBP\">GBP - British Pound</option>
-                <option value=\"JPY\">JPY - Japanese Yen</option>
-                <option value=\"CAD\">CAD - Canadian Dollar</option>
-                <option value=\"AUD\">AUD - Australian Dollar</option>
+                <option value="USD">USD - US Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="AUD">AUD - Australian Dollar</option>
               </select>
             </div>
             
-            <div className=\"relative\">
-              <label htmlFor=\"password\" className=\"block text-sm font-medium text-gray-700\">
+            <div className="relative">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
               </label>
               <input
-                id=\"password\"
-                name=\"password\"
+                id="password"
+                name="password"
                 type={showPassword ? 'text' : 'password'}
-                autoComplete=\"new-password\"
+                autoComplete="new-password"
                 required
                 className={`input-field mt-1 pr-10 ${errors.password ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : ''}`}
-                placeholder=\"Password\"
+                placeholder="Password"
                 value={formData.password}
                 onChange={handleChange}
               />
               <button
-                type=\"button\"
-                className=\"absolute inset-y-0 right-0 pr-3 flex items-center mt-6\"
+                type="button"
+                className="absolute inset-y-0 right-0 pr-3 flex items-center mt-6"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? (
-                  <EyeSlashIcon className=\"h-5 w-5 text-gray-400\" />
+                  <EyeSlashIcon className="h-5 w-5 text-gray-400" />
                 ) : (
-                  <EyeIcon className=\"h-5 w-5 text-gray-400\" />
+                  <EyeIcon className="h-5 w-5 text-gray-400" />
                 )}
               </button>
               {errors.password && (
-                <p className=\"mt-1 text-sm text-red-600\">{errors.password}</p>
+                <p className="mt-1 text-sm text-red-600">{errors.password}</p>
               )}
             </div>
             
-            <div className=\"relative\">
-              <label htmlFor=\"confirmPassword\" className=\"block text-sm font-medium text-gray-700\">
+            <div className="relative">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                 Confirm Password
               </label>
               <input
-                id=\"confirmPassword\"
-                name=\"confirmPassword\"
+                id="confirmPassword"
+                name="confirmPassword"
                 type={showConfirmPassword ? 'text' : 'password'}
-                autoComplete=\"new-password\"
+                autoComplete="new-password"
                 required
                 className={`input-field mt-1 pr-10 ${errors.confirmPassword ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : ''}`}
-                placeholder=\"Confirm password\"
+                placeholder="Confirm password"
                 value={formData.confirmPassword}
                 onChange={handleChange}
               />
               <button
-                type=\"button\"
-                className=\"absolute inset-y-0 right-0 pr-3 flex items-center mt-6\"
+                type="button"
+                className="absolute inset-y-0 right-0 pr-3 flex items-center mt-6"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
                 {showConfirmPassword ? (
-                  <EyeSlashIcon className=\"h-5 w-5 text-gray-400\" />
+                  <EyeSlashIcon className="h-5 w-5 text-gray-400" />
                 ) : (
-                  <EyeIcon className=\"h-5 w-5 text-gray-400\" />
+                  <EyeIcon className="h-5 w-5 text-gray-400" />
                 )}
               </button>
               {errors.confirmPassword && (
-                <p className=\"mt-1 text-sm text-red-600\">{errors.confirmPassword}</p>
+                <p className="mt-1 text-sm text-red-600">{errors.confirmPassword}</p>
               )}
             </div>
           </div>
           
           <div>
             <button
-              type=\"submit\"
+              type="submit"
               disabled={isLoading}
-              className=\"group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed\"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
-                <div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-white\"></div>
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
               ) : (
                 'Create Account'
               )}
@@ -309,4 +309,4 @@ const Register: React.FC = () => {
   );
 };
 
-export default Register;"
+export default Register;

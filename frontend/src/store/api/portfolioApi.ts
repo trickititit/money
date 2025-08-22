@@ -43,4 +43,4 @@ export const {
   useCreatePortfolioMutation,
   useUpdatePortfolioMutation,
   useDeletePortfolioMutation,
-} = portfolioApi;"
+} = portfolioApi;

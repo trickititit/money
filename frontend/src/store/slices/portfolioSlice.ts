@@ -180,4 +180,4 @@ export const {
   clearPortfolioData,
 } = portfolioSlice.actions;
 
-export default portfolioSlice.reducer;"
+export default portfolioSlice.reducer;

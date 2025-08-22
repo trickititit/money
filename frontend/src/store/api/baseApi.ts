@@ -59,4 +59,4 @@ export const baseApi = createApi({
   baseQuery: baseQueryWithReauth,
   tagTypes: ['User', 'Portfolio', 'Asset', 'Transaction', 'Price'],
   endpoints: () => ({}),
-});"
+});
